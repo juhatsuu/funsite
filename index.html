@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <h1>Графики онлайн</h1>
+    <p>Если возникает ошибка: вернитесь на главную страницу</p>
+    <form method="post" action="process">
+        {% csrf_token %}
+  <label for="function">Введите функцию:</label>
+  <input type="text" id="function" name="function"><br>
+  <button type="submit">Отправить</button>
+    </form>
+
+
+{% if image %}
+<img src="data:image/png;base64,{{ image }}">
+{% endif %}
+
+{% endblock %}
