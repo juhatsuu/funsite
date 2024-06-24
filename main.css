@@ -1,0 +1,38 @@
+body {
+    background: #DEB887;
+}
+
+aside {
+    float: left;
+    background: #CD853F;
+    width: 20%;
+    padding: 3%;
+    height: 100vh;
+    color: #000;
+    border-right: 5px solid #8B4513;
+}
+
+aside img {
+    width: 200px;
+}
+
+aside h3 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: px;
+}
+
+aside ul {list-style: none}
+aside ul li {
+    color: #000;
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    transition: all .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    text-decoration: none;
+    transform: scale(1.05);
+}
