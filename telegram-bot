@@ -1,0 +1,27 @@
+import webbrowser
+
+import telebot
+
+bot = telebot.TeleBot('6747935713:AAHL1workGtCIzoMi28ynUnxlKIrxqEd8lE')
+
+@bot.message_handler(commands=['start'])
+def main(message):
+    bot.send_message(message.chat.id, f'Добрый день, {message.from_user.first_name} {message.from_user.last_name}, чем я могу Вам помочь?')
+
+@bot.message_handler(commands=['help'])
+def main(message):
+    bot.send_message(message.chat.id, 'Опишите свою проблему:')
+
+@bot.message_handler(commands=['funsite'])
+def main(message):
+    bot.send_message(message.chat.id, 'http://127.0.0.1:8000/')
+
+
+
+@bot.message_handler(commands=['site', 'website'])
+def site(message):
+    webbrowser.open('http://127.0.0.1:8000/')
+
+
+
+bot.polling(none_stop=True)
