@@ -15,6 +15,7 @@ def main(message):
 @bot.message_handler(commands=['funsite'])
 def main(message):
     bot.send_message(message.chat.id, 'http://127.0.0.1:8000/')
+#изменение
 
 
 
